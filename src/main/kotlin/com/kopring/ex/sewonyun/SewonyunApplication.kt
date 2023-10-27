@@ -5,7 +5,10 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class SewonyunApplication
+    fun main(args: Array<String>) {
+        val context = runApplication<SewonyunApplication>(*args)
+        val environmentConfig = context.getBean(EnvironmentVariable::class.java)
 
-fun main(args: Array<String>) {
-	runApplication<SewonyunApplication>(*args)
-}
+        val accessKey = environmentConfig.getAccessKey()
+        println("ACCESS_KEY: $accessKey")
+    }
