@@ -9,11 +9,18 @@ import org.springframework.context.annotation.PropertySource
 class EnvironmentVariable {
 
     @Value("\${ACCESS_KEY}")
-    private val accessKey: String? = null
+    private lateinit var accessKey: String
+
+    @Value("\${SECRET_KEY}")
+    private lateinit var secretKey: String
 
     fun getAccessKey(): String? {
         return accessKey
     }
+    fun getSecretKey(): String? {
+        return secretKey
+    }
+
 
 }
 
