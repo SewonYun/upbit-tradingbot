@@ -30,6 +30,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("com.auth0:java-jwt:4.4.0")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation ("org.junit.jupiter:junit-jupiter-engine")

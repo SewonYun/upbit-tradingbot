@@ -14,11 +14,24 @@ class EnvironmentVariable {
     @Value("\${SECRET_KEY}")
     private lateinit var secretKey: String
 
+    @Value("\${UMBI_URL}")
+    private lateinit var ubmiUrl: String
+
+    @Value("\${UPBIT_REPOSITORY_URI}")
+    private lateinit var serverURI: String
+
     fun getAccessKey(): String? {
         return accessKey
     }
     fun getSecretKey(): String? {
         return secretKey
+    }
+    fun getServerUrl(): String? {
+        return serverURI
+    }
+
+    fun getUBMIUrl(): String? {
+        return ubmiUrl
     }
 
 
