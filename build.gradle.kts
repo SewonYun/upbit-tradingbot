@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.3"
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
+	kotlin("plugin.serialization") version "1.8.22"
 }
 
 group = "com.kopring.ex"
@@ -28,9 +29,14 @@ dependencies {
 	implementation ("org.springframework.boot:spring-boot-starter")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("com.auth0:java-jwt:4.4.0")
+	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation ("org.junit.jupiter:junit-jupiter-engine")
+	testImplementation ("org.junit.vintage:junit-vintage-engine")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+
 }
 
 tasks.withType<KotlinCompile> {
