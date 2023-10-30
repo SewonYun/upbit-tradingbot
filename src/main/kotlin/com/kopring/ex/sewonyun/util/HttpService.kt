@@ -25,6 +25,9 @@ class HttpService(private val webClientBuilder: WebClient.Builder) {
         serverUrl = environmentVariable.getServerUrl()  ?: ""
     }
 
+    /**
+     * use optional chaining .retrieve() for execute http request
+     */
     fun get(apiUrl: String, params: HashMap<String, String>):WebClient.RequestHeadersUriSpec<*> {
         val jwt = upbitJwtBuilder
             .setParameters(params)
